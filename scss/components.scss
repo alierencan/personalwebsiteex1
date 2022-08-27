@@ -1,0 +1,24 @@
+.site-logo{
+    height: 2.5rem;
+}
+.header-title{
+    font-size: 2.5rem;
+    color: white;
+}
+.header-subtitle{
+    font-size: 1.3rem;
+    color: white;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+.btn{
+    text-decoration: none;
+    color: white;
+    background-color: $main-color;
+    border-radius: 9999px;
+    padding: 0.25rem 1rem;
+}
+.icon-down{
+    position: absolute;
+    bottom: 1rem;
+}
