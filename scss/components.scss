@@ -1,15 +1,22 @@
 .site-logo{
     height: 2.5rem;
+    transition: .5s;
+    &:hover{
+        transform:rotate(1turn);
+    }
+    
 }
 .header-title{
     font-size: 2.5rem;
     color: white;
+    animation: textFromLeft 1s;
 }
 .header-subtitle{
     font-size: 1.3rem;
     color: white;
     margin-top: 1rem;
     margin-bottom: 2rem;
+    animation:textFromRight 1s;
 }
 .btn{
     text-decoration: none;
@@ -17,8 +24,74 @@
     background-color: $main-color;
     border-radius: 9999px;
     padding: 0.25rem 1rem;
+    outline: none;
+    border: none;
 }
 .icon-down{
     position: absolute;
     bottom: 1rem;
+    animation: comeOut 1s alternate infinite;
+}
+
+.portfolio-card{
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin: .5rem 1rem;
+    border: 1px solid white;
+    border-radius: 0.6rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.4);
+    background-image: rgba(255,255,255,0.1);
+    transition: .5s ease-in-out;
+    
+
+    &--project1:hover{
+        transform: scale(1.1);
+        background-image:
+        linear-gradient(
+        to right bottom,
+        rgba(white,0.5),
+        rgba(white,0.9)),
+        url(/img/prj1-bg.jpg);
+        color:$main-font-color;
+        
+        
+    }
+    &--project2:hover{
+        transform: scale(1.1);
+        background-image: 
+        linear-gradient(
+        to right bottom,
+        rgba(white,0.5),
+        rgba(white,0.9)),
+        url(/img/prj2-bg.png);
+        color:$main-font-color;
+
+    }
+    &--project3:hover{
+        transform: scale(1.1);
+        background-image:
+        linear-gradient(
+        to right bottom,
+        rgba(white,0.5),
+        rgba(white,0.9)), 
+        url(/img/prj3-bg.png);
+        color:$main-font-color;
+
+    }
+
+    &--project4:hover{
+        transform: scale(1.1);
+        background-image:
+        linear-gradient(
+        to right bottom,
+        rgba(white,0.5),
+        rgba(white,0.9)),
+        url(/img/prj4-bg.png);
+        color:$main-font-color;
+
+    }
 }

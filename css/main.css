@@ -1,3 +1,70 @@
+*, *::before, *::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+@-webkit-keyframes textFromLeft {
+  0% {
+    transform: translateX(-50%);
+  }
+  70% {
+    transform: translateX(20%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes textFromLeft {
+  0% {
+    transform: translateX(-50%);
+  }
+  70% {
+    transform: translateX(20%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes textFromRight {
+  0% {
+    transform: translateX(50%);
+  }
+  70% {
+    transform: translateX(-20%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes textFromRight {
+  0% {
+    transform: translateX(50%);
+  }
+  70% {
+    transform: translateX(-20%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes comeOut {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes comeOut {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 body {
   color: #1B2522;
 }
@@ -61,6 +128,7 @@ body {
   text-align: center;
   margin: 1rem;
 }
+
 .aboutme-grid {
   display: grid;
   grid-template-columns: minmax(auto, 500px);
@@ -79,6 +147,20 @@ body {
 .aboutme-grid__text {
   font-size: 1.1rem;
   line-height: 1.5rem;
+  text-align: center;
+  vertical-align: center;
+}
+
+.portfolio-container {
+  margin-left: 0px;
+  margin-right: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/img/main-bg.jpg);
+  background-size: cover;
+  height: 100vh;
 }
 
 .site-logo {
@@ -88,6 +170,8 @@ body {
 .header-title {
   font-size: 2.5rem;
   color: white;
+  -webkit-animation: textFromLeft 1s;
+          animation: textFromLeft 1s;
 }
 
 .header-subtitle {
@@ -95,6 +179,8 @@ body {
   color: white;
   margin-top: 1rem;
   margin-bottom: 2rem;
+  -webkit-animation: textFromRight 1s;
+          animation: textFromRight 1s;
 }
 
 .btn {
@@ -103,33 +189,26 @@ body {
   background-color: #189db8;
   border-radius: 9999px;
   padding: 0.25rem 1rem;
+  outline: none;
+  border: none;
 }
 
 .icon-down {
   position: absolute;
   bottom: 1rem;
-}
-
-*, *::before, *::after {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
-
-.portfolio-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-image: url(/img/main-bg.jpg);
-  background-size: cover;
-  height: 100vh;
+  -webkit-animation: comeOut 1s alternate infinite;
+          animation: comeOut 1s alternate infinite;
 }
 
 .portfolio-card {
+  width: 60%;
+  height: 60%;
+  align-items: center;
+  color: white;
   text-align: center;
   padding: 1rem;
   margin: 0.5rem 1rem;
-  border: 1px solid #1B2522;
+  border: 1px solid white;
   border-radius: 0.6rem;
   background-repeat: no-repeat;
   background-size: cover;
@@ -137,12 +216,59 @@ body {
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.4);
   background-image: rgba(255, 255, 255, 0.1);
 }
-.portfolio-card--project2 {
+.portfolio-card--project1:hover {
+  background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9)), url(/img/prj1-bg.jpg);
+  color: #1B2522;
+}
+.portfolio-card--project2:hover {
   background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9)), url(/img/prj2-bg.png);
+  color: #1B2522;
 }
-.portfolio-card--project3 {
+.portfolio-card--project3:hover {
   background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9)), url(/img/prj3-bg.png);
+  color: #1B2522;
 }
-.portfolio-card--project4 {
+.portfolio-card--project4:hover {
   background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9)), url(/img/prj4-bg.png);
+  color: #1B2522;
+}
+
+.form {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.form-label {
+  color: #1B2522;
+  font-weight: bold;
+  display: block;
+}
+
+.form-input {
+  width: 100%;
+  margin-top: 0.3rem;
+  margin-bottom: 0.8rem;
+  outline: none;
+  border: 1.5px solid #1B2522;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  color: inherit;
+  resize: vertical;
+  max-height: 150px;
+}
+.form-input:hover, .form-inputfocus {
+  border-color: #189db8;
+}
+
+.btn-container {
+  text-align: right;
+  cursor: pointer;
+}
+
+.btn-square {
+  font-size: 1.1rem;
+  border-radius: 0.3rem;
+  padding: 0.5rem 1rem;
+  background-color: #189db8;
+  color: white;
 }/*# sourceMappingURL=main.css.map */

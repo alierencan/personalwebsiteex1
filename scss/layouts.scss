@@ -61,8 +61,7 @@ body{
         text-align: center;
         margin: 1rem;
     }
-    &--accent{
-    }
+
 }
 
 .aboutme-grid{
@@ -80,6 +79,21 @@ body{
     &__text{
         font-size: 1.1rem;
         line-height: 1.5rem;
+        text-align: center;
+        vertical-align: center;
     }
+}
+
+
+.portfolio-container{
+    margin-left: 0px;
+    margin-right: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/img/main-bg.jpg);
+    background-size: cover;
+    height: 100vh;
 }
 
