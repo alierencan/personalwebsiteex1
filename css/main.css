@@ -53,6 +53,34 @@ body {
   transform: scaleX(1);
 }
 
+.section {
+  margin: 1rem 0;
+  padding: 1rem;
+}
+.section-title {
+  text-align: center;
+  margin: 1rem;
+}
+.aboutme-grid {
+  display: grid;
+  grid-template-columns: minmax(auto, 500px);
+  row-gap: 2rem;
+  padding: 0.5rem;
+}
+.aboutme-grid__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aboutme-grid__pic {
+  width: 25%;
+  margin: 1rem;
+}
+.aboutme-grid__text {
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+}
+
 .site-logo {
   height: 2.5rem;
 }
@@ -86,4 +114,35 @@ body {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+}
+
+.portfolio-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url(/img/main-bg.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+
+.portfolio-card {
+  text-align: center;
+  padding: 1rem;
+  margin: 0.5rem 1rem;
+  border: 1px solid #1B2522;
+  border-radius: 0.6rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.4);
+  background-image: rgba(255, 255, 255, 0.1);
+}
+.portfolio-card--project2 {
+  background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9)), url(/img/prj2-bg.png);
+}
+.portfolio-card--project3 {
+  background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9)), url(/img/prj3-bg.png);
+}
+.portfolio-card--project4 {
+  background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9)), url(/img/prj4-bg.png);
 }/*# sourceMappingURL=main.css.map */

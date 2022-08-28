@@ -54,3 +54,32 @@ body{
     }
 }
 
+.section{
+    margin: 1rem 0;
+    padding: 1rem;
+    &-title{
+        text-align: center;
+        margin: 1rem;
+    }
+    &--accent{
+    }
+}
+
+.aboutme-grid{
+    display: grid;
+    grid-template-columns: minmax(auto,500px);
+    row-gap: 2rem;
+    padding: .5rem;
+    &__item{
+        @include flexCenter;
+    }
+    &__pic{
+        width: 25%;
+        margin: 1rem;
+    }
+    &__text{
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+    }
+}
+

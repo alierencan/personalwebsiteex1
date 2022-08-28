@@ -4,8 +4,66 @@
 @import 'components';
 @import 'reset';
 
+.portfolio-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url(/img/main-bg.jpg);
+    background-size: cover;
+    height: 100vh;
+}
 
+.portfolio-card{
+    text-align: center;
+    padding: 1rem;
+    margin: .5rem 1rem;
+    border: 1px solid $main-font-color;
+    border-radius: 0.6rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.4);
+    background-image: rgba(255,255,255,0.1);
 
+    &--project1{
+        // background-image:
+        // linear-gradient(
+        // to right bottom,
+        // rgba(white,0.5),
+        // rgba(white,0.9)),
+        // url(/img/prj1-bg.jpg);
+
+        
+    }
+    &--project2{
+        background-image: 
+        linear-gradient(
+        to right bottom,
+        rgba(white,0.5),
+        rgba(white,0.9)),
+        url(/img/prj2-bg.png);
+
+    }
+    &--project3{
+        background-image:
+        linear-gradient(
+        to right bottom,
+        rgba(white,0.5),
+        rgba(white,0.9)), 
+        url(/img/prj3-bg.png);
+
+    }
+
+    &--project4{
+        background-image:
+        linear-gradient(
+        to right bottom,
+        rgba(white,0.5),
+        rgba(white,0.9)),
+        url(/img/prj4-bg.png);
+
+    }
+}
 
 
 
